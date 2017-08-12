@@ -195,7 +195,8 @@ exe "hi! CursorLineConceal" .s:fg_guide   .s:bg_line        .s:fmt_none
 " Terminal in NVIM
 " ---------
 if has("nvim")
-  exec "hi! TermCursor"     .s:fg_bg    .s:bg_fg
+  exec "hi! TermCursor"     .s:fg_bg          .s:bg_constant    .s:fmt_none
+  exec "hi! TermCursorNC"   .s:fg_bg          .s:bg_constant    .s:fmt_none
   let g:terminal_color_0 =  s:palette.bg[s:style]
   let g:terminal_color_1 =  s:palette.markup[s:style]
   let g:terminal_color_2 =  s:palette.string[s:style]
